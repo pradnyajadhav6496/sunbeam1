@@ -20,6 +20,11 @@ app.use(express.json());
 app.use("/admin",adminRoutes);
 app.use("/employees",empRoutes);
 
+app.get("/",(request,response)=>
+{
+    response.send("Hello");
+})
+
 //listen to port for requests
 app.listen(port, function(){
     console.log("Server Started on port  " + port );
